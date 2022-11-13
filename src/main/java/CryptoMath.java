@@ -1,41 +1,54 @@
 public class CryptoMath {
 
-    CryptoData cryptoData;
+   // CryptoData cryptoData;
+
+
+    //CryptoData crypto = new CryptoData();
 
     private double partialProfit;
 
     private double fullNewValue;
 
-    public CryptoMath(CryptoData cryptoData) {
-        this.cryptoData = cryptoData;
+    //public CryptoMath(CryptoData crypto) {
+    //}
+
+    //TODO: Rebuild on BIGDECIMAL!
+
+    public void calculation(double crBuyValue, double crBuyPrice1, int crBuyPrice2, double sellRate, double crSellPrice1, int crSellPrice2) {
+        fullNewValue = crBuyValue / (extremeNum(crBuyPrice1, crBuyPrice2) * extremeNum(crSellPrice1, crSellPrice2));
+        partialProfit = (sellRate / 100) * fullNewValue;
     }
 
-    public double extremeNum(double pre, int pow) {
+    public static double extremeNum(double pre, int pow) {
         return pre * Math.pow(10, pow);
     }
 
     public double getFullNewValue() {
-        fullNewValue = (cryptoData.getCrBuyValue() /
-                (extremeNum(cryptoData.getCrBuyPrice1(), cryptoData.getCrBuyPrice2()))) *
-                extremeNum(cryptoData.getCrSellPrice1(), cryptoData.getCrSellPrice2());
         return fullNewValue;
     }
 
-    public void setFullNewValue(double fullNewValue) {
-        this.fullNewValue = fullNewValue;
-
-    }
+//    public void setFullNewValue(double fullNewValue) {
+//        this.fullNewValue = fullNewValue;
+//    }
 
 
     public double getPartialProfit() {
-        partialProfit = (cryptoData.getSellRate() / 100) * getFullNewValue();
-        // TODO: max. 4 tizedesjegy!
         return partialProfit;
     }
 
-    public void setPartialProfit(double partialProfit) {
-        this.partialProfit = partialProfit;
+//    public void setPartialProfit(double partialProfit) {
+//        this.partialProfit = partialProfit;
+//
+//
+//    }
 
-    }
 
+//    public static void main(String[] args) {
+//
+//        CryptoData crypto = new CryptoData();
+//
+//
+//    }
 }
+
+

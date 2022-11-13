@@ -9,7 +9,7 @@ public class Main {
 
         crypto = DataInput.dataInput();
 
-        CryptoMath crMath = new CryptoMath(crypto);
+        CryptoMath crMath = new CryptoMath();
 
         OutputCalc.outputCalc(crypto, crMath);
 

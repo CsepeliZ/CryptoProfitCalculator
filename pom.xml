@@ -6,7 +6,7 @@
 
     <groupId>TurtleSoft</groupId>
     <artifactId>CryptoProfitCalculator</artifactId>
-    <version>0.2.3-SNAPSHOT</version>
+    <version>0.3.2-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
